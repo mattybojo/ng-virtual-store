@@ -1,27 +1,39 @@
-# NgVirtualStore
+# EFLDashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+## Configuration needed
 
-## Development server
+Before running the application, create a folder named config under src/app. In this folder, create a file named index.ts. Set up the config file with your firebase and firebaseui configs, using the below as a template:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+export const config = {
+  firebaseConfig: {
+    apiKey: <YOUR_DATA_HERE>,
+    authDomain: <YOUR_DATA_HERE>,
+    databaseURL: <YOUR_DATA_HERE>,
+    projectId: <YOUR_DATA_HERE>,
+    storageBucket: <YOUR_DATA_HERE>,
+    messagingSenderId: <YOUR_DATA_HERE>,
+    appId: <YOUR_DATA_HERE>,
+    measurementId: <YOUR_DATA_HERE>,
+  },
+};
 
-## Code scaffolding
+export const firebaseUiConfig = {
+  // Config here
+;
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Explanation of config properties:
 
-## Build
+`firebaseConfig` - The data that firebase provides when you create an application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`firebaseUiConfig` - The config to setup the firebaseui login page.
 
-## Running unit tests
+## Analyzing bundle size
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run the following commands to open a window that will show a visual representation of your build output:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+ng build --stats-json
+webpack-bundle-analyzer dist/stats-es5.json
+```

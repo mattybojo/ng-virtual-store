@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { faBars, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'ngvs-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'ngvs-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class AppComponent {
+export class HeaderComponent {
   faBars: IconDefinition = faBars;
 }

@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { firebaseUiConfig } from 'src/app/config';
 import { SharedModule } from './shared/shared.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = firebaseUiConfig;
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    BrowserModule,
     SharedModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'virtual-store'),
@@ -22,7 +24,6 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = firebaseUiConfig;
     AngularFireAuthModule,
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,4 @@
+<ng-container *ngFor="let product of products; let indx = index">
+  <hr *ngIf="indx === 0" />
+  <ngvs-product [product]="product"></ngvs-product>
+</ng-container>

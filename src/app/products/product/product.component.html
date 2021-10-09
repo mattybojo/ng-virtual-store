@@ -1,0 +1,9 @@
+<div class="d-flex flex-row">
+  <img [src]="product.image" class="float-start me-2" alt="Product image" />
+  <div class="d-flex flex-column justify-content-center">
+    <p>{{ product.name }}</p>
+    <p>{{ product.description }}</p>
+    <p class="mb-0">{{ product.price | currency }}</p>
+  </div>
+</div>
+<hr />

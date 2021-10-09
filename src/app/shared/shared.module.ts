@@ -1,33 +1,14 @@
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './components/footer/footer.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CommonModule } from '@angular/common';
 
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FooterComponent } from './footer/footer.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    SidenavComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FontAwesomeModule
-  ],
-  exports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FontAwesomeModule,
-    HeaderComponent,
-    FooterComponent,
-    SidenavComponent
-  ]
+  declarations: [HeaderComponent, FooterComponent, SidenavComponent],
+  imports: [CommonModule, BrowserAnimationsModule, FontAwesomeModule],
+  exports: [HeaderComponent, FooterComponent, SidenavComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

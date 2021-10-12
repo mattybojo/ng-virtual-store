@@ -5,10 +5,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidenavComponent],
-  imports: [CommonModule, BrowserAnimationsModule, FontAwesomeModule],
+  imports: [CommonModule, BrowserAnimationsModule, FontAwesomeModule, RouterModule],
   exports: [HeaderComponent, FooterComponent, SidenavComponent],
 })
-export class SharedModule {}
+export class SharedModule { }

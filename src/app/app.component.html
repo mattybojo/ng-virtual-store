@@ -1,4 +1,8 @@
-<ngvs-header></ngvs-header>
-<ngvs-sidenav></ngvs-sidenav>
-<router-outlet></router-outlet>
-<ngvs-footer></ngvs-footer>
+<div class="d-flex flex-column min-vh-100">
+  <ngvs-header></ngvs-header>
+  <ngvs-sidenav></ngvs-sidenav>
+  <div class="flex-grow-1">
+    <router-outlet></router-outlet>
+  </div>
+  <ngvs-footer></ngvs-footer>
+</div>

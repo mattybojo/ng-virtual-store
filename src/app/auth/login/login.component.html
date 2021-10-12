@@ -1,0 +1,6 @@
+<div class="border border-secondary d-flex flex-column align-items-center w-50 mx-auto mt-4 rounded">
+  <h1 class="mt-2">Sign-In</h1>
+  <firebase-ui
+    (signInSuccessWithAuthResult)="onSigninSuccess($event)"
+    (signInFailure)="onSigninFailure($event)"></firebase-ui>
+</div>

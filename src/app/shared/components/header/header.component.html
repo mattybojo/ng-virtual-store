@@ -9,7 +9,16 @@
         aria-controls="sidenav">
         <fa-icon [icon]="faBars"></fa-icon>
       </button>
-      <a class="navbar-brand pt-0 pb-0" href="#">Virtual Store</a>
+      <a class="navbar-brand pt-0 pb-0" [routerLink]="['/']">Virtual Store</a>
+    </div>
+    <div>
+      <ng-container *ngIf="isLoggedIn(); then loggedIn; else notLoggedIn"></ng-container>
+      <ng-template #notLoggedIn>
+        <button type="button" class="btn btn-primary" (click)="onLoginClick()">Login</button>
+      </ng-template>
+      <ng-template #loggedIn>
+        <button type="button" class="btn btn-primary" (click)="onLogoutClick()">Logout</button>
+      </ng-template>
     </div>
   </div>
 </nav>
